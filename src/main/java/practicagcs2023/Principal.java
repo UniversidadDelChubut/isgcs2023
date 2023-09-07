@@ -10,12 +10,12 @@ public class Principal {
 	
 		private static final Logger logger = LogManager.getLogger(Principal.class);
 
-		private static class Entrada {
+		public static class Entrada {
 			private String campo;
 			private Double valor;
 		}
 
-		private static class Salida {
+		public static class Salida {
 			private String idProceso;
 			private String campo;
 			private Double total;
