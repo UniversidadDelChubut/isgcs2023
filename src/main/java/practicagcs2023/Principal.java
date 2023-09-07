@@ -13,12 +13,28 @@ public class Principal {
 		public static class Entrada {
 			private String campo;
 			private Double valor;
+			
+			public String getCampo() {
+				return campo;
+			}
+
+			public Double getValor() {
+				return valor;
+			}
+			
+			
 		}
 
 		public static class Salida {
 			private String idProceso;
 			private String campo;
 			private Double total;
+			
+			public Salida(String idProceso, String campo, Double total) { //Constructor
+				this.idProceso = idProceso;
+				this.campo = campo;
+				this.total = total;
+			}
 		}
 
 		public static void main(String[] args) {
