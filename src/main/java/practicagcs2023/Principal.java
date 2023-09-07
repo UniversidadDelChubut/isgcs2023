@@ -22,13 +22,18 @@ public class Principal {
 			private String idProceso;
 			private String campo;
 			private Double total;
+			
 		}
 
 		public static void main(String[] args) {
-
-	            String consulta = "insert into salidas (idproceso, campo, total) values ('a6' , 'testasn', 50)";;
-	            jdbc.ejecutarConsulta(consulta);
-
+				
+			for (String salida : lista) {
+			String consulta = "INSERT INTO salidas (idproceso, campo, total) VALUES('"
+							 +salida.getIdproceso()+"' , '"
+							 +salida.getCampo()+"', "+salida.getTotal()");";
+	        jdbc.ejecutarConsulta(consulta);
+			
+			}
 
 		}	
 
