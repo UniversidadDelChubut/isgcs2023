@@ -22,5 +22,11 @@
     <artifactId>commons-fileupload</artifactId>
     <version>1.5</version>
 </dependency>
+<!-- esto es lo que agregue -->
+<dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-csv</artifactId>
+        <version>1.8</version> <!-- Utiliza la versión más reciente de Apache Commons CSV -->
+    </dependency>
 	</dependencies>
 </project>
