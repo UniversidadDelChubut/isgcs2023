@@ -1,5 +1,8 @@
 package practicagcs2023;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -30,24 +33,26 @@ public class Principal {
 			private String campo;
 			private Double total;
 			
+<<<<<<< HEAD
 			public Salida(String idProceso, String campo, Double total) { //Constructor
 				this.idProceso = idProceso;
 				this.campo = campo;
 				this.total = total;
 			}
+=======
+>>>>>>> 03936922ff492ee3f24c0e92a277c95d49af826b
 		}
 
 		public static void main(String[] args) {
-			logger.info("Inicia main!");
+				
+			for (String salida : lista) {
+			String consulta = "INSERT INTO salidas (idproceso, campo, total) VALUES('"
+							 +salida.getIdproceso()+"' , '"
+							 +salida.getCampo()+"', "+salida.getTotal()");";
+	        jdbc.ejecutarConsulta(consulta);
+			
+			}
 
-			List<Entrada> entradas =  null; // Obtenerla de la clase Lector
-
-			List<Salida> salidas =  null; // Obtenerla de la clase Procesador a partir delas entradas leidas
-
-			// Persistir las salidas en la base de datos con la clase Escritor
-
-
-			logger.info("Finaliza main!");
 		}	
 
 }
